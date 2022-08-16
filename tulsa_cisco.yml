@@ -1,2 +1,1 @@
-  cisco.ios.ios_command:
     commands: show version
