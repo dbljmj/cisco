@@ -6,5 +6,6 @@
   tasks:
    - name: Fist Task
      ios_command:
+         commands: telnet 172.18.200.170
          commands: show version
      register: version
