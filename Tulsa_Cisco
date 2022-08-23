@@ -1,0 +1,10 @@
+---
+- name: First Play
+  hosts: Tulsa_Switch
+  gather_facts: False
+  connection:  local
+  tasks:
+   - name: Fist Task
+     ios_command:
+         commands: show version
+     register: version
