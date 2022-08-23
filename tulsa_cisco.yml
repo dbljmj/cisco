@@ -2,8 +2,7 @@
 - name: 
   hosts: Tulsa_Switch
   
-  tasks:
-  
+  tasks:  
 - name: run show version on remote devices
   cisco.ios.ios_command:
     commands: show version
