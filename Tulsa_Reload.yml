@@ -1,14 +1,11 @@
 ---
-- name: Define Parameters
-  hosts: Tulsa_Test
+
+- hosts: routers
   gather_facts: no
   connection: network_cli
+
   tasks:
-   - name: backup the config
-     ios_config:
+
+  - name: BACKUP RUNNING CONFIG
+    ios_config:
       backup: yes
-     register: backup_config
-   - name: Store the config to directory
-     copy:
-      src: "{{ backup_config.backup_path }}"
-      dest: "/tmp/backups/{{ hostname }}"
