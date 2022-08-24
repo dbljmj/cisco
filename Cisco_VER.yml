@@ -7,6 +7,7 @@
    - name: Fist Task
      ios_command:
          commands: show version
+         commands: show inventory
      register: version
      vars:
          ansible_command_timeout: 60
