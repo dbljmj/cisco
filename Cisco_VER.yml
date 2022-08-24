@@ -1,7 +1,7 @@
 ---
 - name: First Play
   hosts: Tulsa_Test
-  gather_facts: False
+  gather_facts: True
   connection:  local
   tasks:
    - name: Fist Task
