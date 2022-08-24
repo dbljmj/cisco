@@ -7,6 +7,6 @@
       commands:
         - show run
     
-  - name: Save output to /etc/ansible/backups
+  - name: Save output to /tmp/ansible/backups
     copy:
      content: "{{ config.stdout[0] }}"
