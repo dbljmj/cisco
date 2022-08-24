@@ -12,4 +12,4 @@
     - name: SAVE IOS CONFIG
       copy:
         content: "{{ output_router.stdout[0] }}"
-        dest: "/home/ubuntu/cisco-backups/show_run_{{ inventory_hostname }}.txt"
+        dest: "/tmp/ansible/backups/show_run_{{ inventory_hostname }}.txt"
