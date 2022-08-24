@@ -1,6 +1,6 @@
 ---
 
-- hosts: routers
+- hosts: Tulsa_Switch
   gather_facts: no
   connection: network_cli
 
