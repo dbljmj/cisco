@@ -6,7 +6,6 @@
     ios_command:
       commands:
         - show run
-    register: config
     
   - name: Save output to /etc/ansible/backups
     copy:
