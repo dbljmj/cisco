@@ -1,6 +1,6 @@
 ---
 - name: 
-  hosts: Tulsa_Switch
+  hosts: Tulsa_Test
   tasks:
   - name: Show Running Configuration
     ios_command:
