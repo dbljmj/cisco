@@ -1,7 +1,7 @@
 - name: IOS ROUTERS
   hosts: Tulsa_Test
   gather_facts: false
-  connection: network_cli
+  connection: local
 
   tasks:
     - name: IOS CONFIG
