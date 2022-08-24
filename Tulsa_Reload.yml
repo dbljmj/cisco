@@ -11,4 +11,4 @@
    - name: Store the config to directory
      copy:
       src: "{{ backup_config.backup_path }}"
-      dest: "/tmp/backups/{{ inventory_hostname }}"
+      dest: "/tmp/backups/{{ hostname }}"
