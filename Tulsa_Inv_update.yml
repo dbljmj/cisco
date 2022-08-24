@@ -9,7 +9,6 @@
         commands: show run
       register: output_router
 
-    - name: SAVE IOS CONFIG
-      copy:
-        content: "{{ output_router.stdout[0] }}"
-        dest: "/backups/show_run_{{ inventory_hostname }}.txt"
+    - name: copy code
+      debug:  	
+        var: output_router
