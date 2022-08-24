@@ -6,7 +6,7 @@
   tasks:
    - name: Fist Task
      ios_command:
-         command: "reload"
-                   prompt: '[confirm]'
-                   answer: "\r"
+         command: reload
+                  prompt: '[confirm]'
+                  answer: "\r"
      register: version
