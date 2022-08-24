@@ -1,0 +1,12 @@
+---
+- name: First Play
+  hosts: Tulsa_Test
+  gather_facts: True
+  connection:  local
+  tasks:
+   - name: Fist Task
+     ios_command:
+         command: "reload"
+                   prompt: '[confirm]'
+                   answer: "\r"
+     register: version
