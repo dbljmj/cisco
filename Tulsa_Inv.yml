@@ -1,10 +1,17 @@
 ---
-- name: First Play
-  hosts: Tulsa_Test
-  gather_facts: True
-  connection:  local
+- hosts: all
+  gather_facts: true
+  connection: network_cli
+  become: yes
+
   tasks:
-   - name: Backup Running Config
-     ios_command:
-         backup: yes
-     register: version
+  - name: Show Running Configuration
+    ios_command:
+      commands:
+        - show run
+    register: config
+    
+  - name: Save output to /etc/ansible/backups
+    copy:
+     content: "{{ config.stdout[0] }}"
+     dest: "/etc/ansible/backups/show_run_config_{{ inventory_hostname }}.txt"
