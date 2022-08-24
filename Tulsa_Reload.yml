@@ -1,12 +1,14 @@
 ---
-- name: First Play
+- name: Define Parameters
   hosts: Tulsa_Test
-  gather_facts: False
-  connection:  local
+  gather_facts: no
+  connection: network_cli
   tasks:
-   - name: Fist Task
-     ios_command:
-         command: reload
-                  prompt: '[confirm]'
-                  answer: "\r"
-     register: version
+   - name: backup the config
+     ios_config:
+      backup: yes
+     register: backup_config
+   - name: Store the config to directory
+     copy:
+      src: "{{ backup_config.backup_path }}"
+      dest: "/tmp/backups/{{ inventory_hostname }}"
