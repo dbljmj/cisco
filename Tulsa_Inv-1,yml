@@ -1,0 +1,15 @@
+- name: IOS ROUTERS
+  hosts: Tulsa_Test
+  gather_facts: false
+  connection: network_cli
+
+  tasks:
+    - name: IOS CONFIG
+      ios_command:
+        commands: show run
+      register: output_router
+
+    - name: SAVE IOS CONFIG
+      copy:
+        content: "{{ output_router.stdout[0] }}"
+        dest: "/home/ubuntu/cisco-backups/show_run_{{ inventory_hostname }}.txt"
