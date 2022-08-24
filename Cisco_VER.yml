@@ -8,3 +8,5 @@
      ios_command:
          commands: show version
      register: version
+     vars:
+         ansible_command_timeout: 60
