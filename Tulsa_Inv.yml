@@ -1,8 +1,6 @@
 ---
-- hosts: Tulsa_Switch
-  gather_facts: true
-  become: yes
-
+- name: 
+  hosts: Tulsa_Switch
   tasks:
   - name: Show Running Configuration
     ios_command:
@@ -13,4 +11,3 @@
   - name: Save output to /etc/ansible/backups
     copy:
      content: "{{ config.stdout[0] }}"
-     dest: "/etc/ansible/backups/show_run_config_{{ inventory_hostname }}.txt"
