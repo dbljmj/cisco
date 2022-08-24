@@ -1,6 +1,8 @@
 ---
-- name: 
+- name: First Play
   hosts: Tulsa_Test
+  gather_facts: True
+  connection:  local
   tasks:
   - name: Show Running Configuration
     ios_command:
