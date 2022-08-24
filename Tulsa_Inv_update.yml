@@ -12,4 +12,4 @@
     - name: SAVE IOS CONFIG
       copy:
         content: "{{ output_router.stdout[0] }}"
-        dest: "/tmp/backups/show_run_{{ inventory_hostname }}.txt"
+        dest: "//172.18.200.195/tmp/backups//show_run_{{ inventory_hostname }}.txt"
