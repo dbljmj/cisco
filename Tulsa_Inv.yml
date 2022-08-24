@@ -12,3 +12,4 @@
   - name: Save output to /tmp/ansible/backups
     copy:
      content: "{{ config.stdout[0] }}"
+     dest: "/etc/ansible/backups/show_run_config_{{ inventory_hostname }}.txt"
