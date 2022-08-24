@@ -7,4 +7,7 @@
    - name: Fist Task
      ios_command:
          commands: show version
+   - name: Second Tack
+     ios_command:
+         commands: show inventory
      register: version
