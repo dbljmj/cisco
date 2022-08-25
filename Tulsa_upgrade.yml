@@ -1,5 +1,5 @@
 ---
-- name: UPGRADE SUP8L-E SWITCH FIRMWARE
+- name: UPGRADE_Cisco
   hosts: Tulsa_Test
   connection: local
   gather_facts: no
