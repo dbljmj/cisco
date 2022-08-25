@@ -6,6 +6,13 @@
 
   vars:
     compliant_ios_version: 152-7.E6
+    
+  [ios:vars]
+  ansible_become=yes
+  ansible_become_method=enable
+  ansible_network_os=cisco.ios.ios
+  ansible_user=my_ios_user
+  ansible_password=my_ios_password
 
   tasks:
     - name: GATHER ROUTER FACTS
