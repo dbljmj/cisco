@@ -1,5 +1,5 @@
 ---
-- hosts: enterprise_l2
+- hosts: Tulsa_Test
   gather_facts: false
   connection: local
 
