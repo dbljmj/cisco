@@ -87,4 +87,3 @@
         when: '"new_ios_md5" in md5_result.stdout[0]'
 
       when: ansible_net_version != compliant_ios_version
-...
