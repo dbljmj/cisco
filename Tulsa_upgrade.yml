@@ -1,7 +1,7 @@
 ---
 - name: UPGRADE SUP8L-E SWITCH FIRMWARE
   hosts: Tulsa_Test
-  connection: network_cli
+  connection: local
   gather_facts: no
 
   vars_prompt:
