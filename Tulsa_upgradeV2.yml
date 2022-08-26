@@ -11,7 +11,7 @@
         ios_archive: "c2960x-universalk9-mz.150-2a.EX5.tar"
         ios_binary: "c2960x-universalk9-mz.150-2a.EX5.bin"
     server: "172.18.200.52"
-    protocol: "tftp"
+    protocol: "http"
 
   tasks:
     - name: Gather all legacy facts
