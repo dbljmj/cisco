@@ -3,3 +3,10 @@
 
 [Tulsa_Test]
 172.18.200.170
+
+[Tulsa_Switch:vars]
+ansible_become=yes
+ansible_become_method=enable
+ansible_network_os=cisco.ios.ios
+ansible_user=admin
+ansible_password=!@#Capa1050#@!
