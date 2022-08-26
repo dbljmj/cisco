@@ -33,7 +33,7 @@
       block:
         - name: Check if IOS is already present on the flash
           ios_command:
-            commands: 'show flash: | include {{ models[ansible_net_model]["ios_archive"] }}'
+            commands: 'show flash: 
           register: dir_flash
           tags:
             - flash
