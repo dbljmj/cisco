@@ -8,8 +8,8 @@
       "WS-C2960X-24PS-L":
         ios_version: "15.0(2a)EX5"
         ios_path: "IOS/"
-        ios_archive: "c2960x-universalk9-mz.150-2a.EX5.tar"
-        ios_binary: "c2960x-universalk9-mz.150-2a.EX5.bin"
+        ios_archive: "c2960x-universalk9-mz.152-7.E6.tar"
+        ios_binary: "c2960x-universalk9-mz.152-7.E6.bin"
     server: "172.18.200.52"
     protocol: "http"
 
