@@ -1,6 +1,8 @@
 ---
 - Name: upgrade CISCO IOS
-  hosts: Tulsa_Test
+   hosts: Tulsa_Test
+  gather_facts: Fals
+  connection:  local
   
   vars:
     upgrade_ios_version: 12.2
