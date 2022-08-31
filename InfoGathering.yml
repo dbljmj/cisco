@@ -1,0 +1,20 @@
+- name: Get facts from switch
+  hosts: Tulsa_Test
+  gather_facts: no
+  tasks:
+
+    - name: gather facts > Get facts from IOS device
+      ios_facts:
+        gather_subset: all
+      vars:
+        ansible_persistent_log_messages: True
+
+    - name: Debug ansible_net_model
+      debug:
+        var: ansible_net_model
+      ignore_errors: true
+
+    - name: Debug ansible_net_stacked_models
+      debug:
+        var: ansible_net_stacked_models
+      ignore_errors: true
