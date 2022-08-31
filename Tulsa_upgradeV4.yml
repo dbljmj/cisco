@@ -4,8 +4,6 @@
   
   vars:
     upgrade_ios_version: 12.2
-	
-	
   tasks:
     - name: CHECK CURRENT VERSION
       ios_facts:
