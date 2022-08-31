@@ -1,8 +1,8 @@
-- name: Get facts from switch
+---
+- name: First Play
   hosts: Tulsa_Test
-  gather_facts: no
-  connection: local
-  
+  gather_facts: True
+  connection:  local
   tasks:
     - name: gather facts > Get facts from IOS device
       ios_facts:
