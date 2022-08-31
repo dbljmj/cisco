@@ -2,8 +2,8 @@
   hosts: Tulsa_Test
   gather_facts: no
   connection: local
+  
   tasks:
-
     - name: gather facts > Get facts from IOS device
       ios_facts:
         gather_subset: all
