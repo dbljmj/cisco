@@ -4,11 +4,11 @@
 - name: Upgrade CISCO IOS 
   hosts: Tulsa_Test
   gather_facts: false
-  host_key_checking=False
   connection: local
 
   vars: 
     upgrade_ios_version: 12.2(55)SE12
+    host_key_checking = False
 
   tasks:
     - name: CHECK CURRENT VERSION
