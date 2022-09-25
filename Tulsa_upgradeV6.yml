@@ -3,6 +3,7 @@
 
 - name: Upgrade CISCO IOS 
   hosts: Tulsa_Test
+  gather_facts: false
   connection: local
 
   vars: 
