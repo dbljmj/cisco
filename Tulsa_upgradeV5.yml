@@ -1,6 +1,7 @@
 ---
 - hosts: Tulsa_Test
   gather_facts: false
+  debugger: on_failed
   connection: local
 
   vars:
