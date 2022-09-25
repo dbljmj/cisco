@@ -3,6 +3,7 @@
 
 - name: Upgrade CISCO IOS 
   hosts: Tulsa_Test
+  connection: local
 
   vars: 
     upgrade_ios_version: 12.2(55)SE12
