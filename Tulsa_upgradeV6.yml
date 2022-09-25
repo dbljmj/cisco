@@ -4,7 +4,7 @@
 - name: Upgrade CISCO IOS 
   hosts: Tulsa_Test
   gather_facts: false
-  host_key_checking = False
+  host_key_checking=False
   connection: local
 
   vars: 
