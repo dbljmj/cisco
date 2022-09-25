@@ -12,7 +12,6 @@
         ios_archive: "c2960x-universalk9-mz.150-2a.EX5.tar"
         ios_binary: "c2960x-universalk9-mz.150-2a.EX5.bin"
         ios_md5: "07195a8c7866ac2a91c64b716465c516"
-        ios_size_kb: 18233984
     server: "172.18.200.52"
     protocol: "tftp"
 
