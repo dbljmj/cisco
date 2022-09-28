@@ -70,7 +70,7 @@
    - name: Copy Image // This could take up to 4 minutes
      net_put: 
        src: "~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin"
-       dest: "flash:/c2960-lanbasek9-mz.122-55.SE12.bin"
+       dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
      vars: 
        ansible_command_timeout: 600
 
@@ -79,7 +79,7 @@
    - name: Change Boot Variable to new image 
      ios_config: 
        commands: 
-         - "boot system flash:c2960-lanbasek9-mz.122-55.SE12.bin"
+         - "boot system flash:c2960x-universalk9-mz.152-7.E6.bin"
        save_when: always 
 
 ## Reload the device 
