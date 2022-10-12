@@ -26,7 +26,7 @@
 
 ## Create backup folder for today 
 
-- hosts: localhost
+- hosts: Tulsa_Test
 
   tasks:
    - name: Get ansible date/time facts
