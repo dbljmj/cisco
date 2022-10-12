@@ -96,7 +96,7 @@
 
    - name: Wait for device to come back online
      wait_for:
-       host: "{{ inventory_hostname }}"
+       host: Tulsa_Test
        port: 22
        delay: 90
      delegate_to: localhost
