@@ -65,13 +65,11 @@
      ios_config:
        save_when: always 
 
-## Copy software to target device 
-
-   - name: file transfer on remote host
-     copy:
-     src: /network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
-     remote_src: true
-     dest: flash:c2960x-universalk9-mz.152-7.E6.bin
+# File copy from ansible controller to nxos device
+- name: copy from server to device
+  cisco.nxos.nxos_file_copy:
+    local_file: ./network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
+    remote_file: flash:c2960x-universalk9-mz.152-7.E6.bin
 
 ## Change the Boot Variable to the new image 
 
