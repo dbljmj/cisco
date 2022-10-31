@@ -67,9 +67,16 @@
 
 # File copy from ansible controller to nxos device
 
-   - name: copy from server to device
-     scp:
-     scp /network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin admin@172.18.200.170:flash:c2960x-universalk9-mz.152-7.E6.bin
+   - name: UPGRADE IOS IMAGE IF NOT COMPLIANT
+      block:
+      - name: COPY OVER IOS IMAGE
+        ios_command:
+           commands:
+              - command: "copy tftp://172.18.200.195/{{ new_ios_bin }} bootflash:"
+                prompt: '[{{ new_ios_bin }}]'
+              answer: "\r"
+        vars:
+          ansible_command_timeout: 1800
 
 ## Change the Boot Variable to the new image 
 
