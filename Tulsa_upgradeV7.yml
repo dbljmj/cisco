@@ -67,11 +67,11 @@
 
 ## Copy software to target device 
 
-   -name: file transfer on remote host
-    copy:
-    src: /network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
-    remote_src: true
-    dest: flash:c2960x-universalk9-mz.152-7.E6.bin
+   - name: file transfer on remote host
+     copy:
+     src: /network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
+     remote_src: true
+     dest: flash:c2960x-universalk9-mz.152-7.E6.bin
 
 ## Change the Boot Variable to the new image 
 
