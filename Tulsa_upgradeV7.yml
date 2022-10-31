@@ -69,8 +69,7 @@
 
    - name: copy from server to device
      scp:
-     local_file: ./network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
-     remote_file: flash:c2960x-universalk9-mz.152-7.E6.bin
+     scp /network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin admin@172.18.200.170:flash:c2960x-universalk9-mz.152-7.E6.bin
 
 ## Change the Boot Variable to the new image 
 
