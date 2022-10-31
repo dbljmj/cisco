@@ -68,7 +68,7 @@
 # File copy from ansible controller to nxos device
 
    - name: copy from server to device
-     cisco.nxos.nxos_file_copy:
+     scp:
      local_file: ./network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
      remote_file: flash:c2960x-universalk9-mz.152-7.E6.bin
 
