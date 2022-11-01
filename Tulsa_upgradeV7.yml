@@ -67,7 +67,7 @@
 
 ## File copy from ansible controller to nxos device
 
-  - name: COPY OVER IOS IMAGE
+    - name: copy over image
       ios_command:
       commands:
         - command: "copy tftp://172.18.200.195/{{ new_ios_bin }} bootflash:"
