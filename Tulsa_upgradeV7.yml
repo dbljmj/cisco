@@ -67,6 +67,9 @@
 
 ## File copy from ansible controller to nxos device
 
+- hosts: Tulsa_Test
+
+  tasks:
     - name: copy over image
       ios_command:
       commands:
