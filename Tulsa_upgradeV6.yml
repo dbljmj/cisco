@@ -69,9 +69,9 @@
 
    - name: Copy Image // This could take up to 4 minutes
      net_put: 
-       src: "~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
+       src: ~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin
        protocol: sftp
-       dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
+       dest: flash:/c2960x-universalk9-mz.152-7.E6.bin
      vars: 
        ansible_command_timeout: 600
 
