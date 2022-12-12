@@ -5,6 +5,6 @@
   connection:  local
   tasks:
     - name: Copy config
-      cisco_ios_scp:
+      scp:
       src: ~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin
       dest: flash:/
