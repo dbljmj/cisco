@@ -1,5 +1,5 @@
 ---
-- hosts: tulsa_switch
+- hosts: Tulsa_Test
   tasks:
   - name: Upgrade Cisco IOS
     ios_image:
