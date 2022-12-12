@@ -65,7 +65,7 @@
 
 ## Copy software to target device 
 
-   - name: Copy Image // This could take up to 4 minutes
+   - name: Copy Image
      net_put: 
        src: "~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin"
        dest: "flash:/c2960-lanbasek9-mz.122-55.SE12.bin"
@@ -119,5 +119,3 @@
    - debug: 
        msg: 
        - "Software Upgrade has been completed"
-	   
-
