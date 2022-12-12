@@ -3,8 +3,11 @@
   hosts: Tulsa_Test
   gather_facts: True
   connection:  local
+ 
   tasks:
-    - name: Copy config
-      scp:
-      src: ~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin
-      dest: flash:/
+    - name: Copy Image
+     net_put: 
+       src: "~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin"
+       dest: "flash:/c2960-lanbasek9-mz.122-55.SE12.bin"
+     vars: 
+       ansible_command_timeout: 600
