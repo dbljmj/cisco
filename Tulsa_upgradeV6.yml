@@ -1,6 +1,6 @@
 ---
-- name: Upgrade Cisco 2960X code
-  hosts: Tulsa_Test
+- name: Upgrade Cisco IOS code
+  hosts: cisco
   gather_facts: no
   
   tasks:
