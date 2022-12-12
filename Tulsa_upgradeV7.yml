@@ -1,19 +1,8 @@
 ---
-# Ansible Playbook to upgrade Cisco IOS 
-
-- name: Upgrade CISCO IOS 
-  hosts: Tulsa_Test
-  gather_facts: false
-  connection: local
-
-  
-## File copy from ansible controller to nxos device
-
-  - name: copy over image
-      ios_command:
-      commands:
-        - command: "copy tftp://172.18.200.195/{{ new_ios_bin }} bootflash:"
-                prompt: '[{{ new_ios_bin }}]'
-              answer: "\r"
-        vars:
-          ansible_command_timeout: 1800
+- hosts: tulsa_switch
+  tasks:
+  - name: Upgrade Cisco IOS
+    ios_image:
+      src: /path/to/ios/image.bin
+      dest: bootflash:
+      force: yes
