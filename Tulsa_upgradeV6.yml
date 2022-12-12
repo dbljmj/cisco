@@ -1,15 +1,10 @@
 ---
-- name: Upgrade Cisco IOS code
-  hosts: cisco
-  gather_facts: no
-  
+- name: First Play
+  hosts: Tulsa_Test
+  gather_facts: True
+  connection:  local
   tasks:
-    - name: Copy new code to device
-       cisco_ios_scp:
-       src: ~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin
-       dest: flash:/
-
-    - name: Install new code
-       cisco_ios_software:
-       image: flash:/c2960-lanbasek9-mz.122-55.SE12.bin
-       replace: yes
+  - name: Copy config
+    cisco_ios_scp:
+      src: ~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin
+      dest: flash:/
