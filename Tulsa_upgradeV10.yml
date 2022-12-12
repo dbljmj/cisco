@@ -5,7 +5,7 @@
   hosts: SWITCHES
 
   vars: 
-    upgrade_ios_version: 12.2(55)SE12
+    upgrade_ios_version: 152-7.E6
 
   tasks:
     - name: CHECK CURRENT VERSION
@@ -14,7 +14,7 @@
     - debug: 
         msg: 
         - "Current version is {{ ansible_net_version }}"
-        - "Upgrade image is 12.2.55-SE12"
+        - "Upgrade image is c2960x-universalk9-mz.152-7.E6.bin"
 
     - debug: 
         msg: 
@@ -67,8 +67,8 @@
 
    - name: Copy Image // This could take up to 4 minutes
      net_put: 
-       src: "~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin"
-       dest: "flash:/c2960-lanbasek9-mz.122-55.SE12.bin"
+       src: "~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
+       dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
      vars: 
        ansible_command_timeout: 600
 
@@ -77,7 +77,7 @@
    - name: Change Boot Variable to new image 
      ios_config: 
        commands: 
-         - "boot system flash:c2960-lanbasek9-mz.122-55.SE12.bin"
+         - "boot system flash:c2960x-universalk9-mz.152-7.E6.bin"
        save_when: always 
 
 ## Reload the device 
@@ -111,7 +111,7 @@
    - name: ASSERT THAT THE IOS VERSION IS CORRECT
    
      vars: 
-       upgrade_ios_version: 12.2(55)SE12
+       upgrade_ios_version: 152-7.E6
 
      assert:
        that:
