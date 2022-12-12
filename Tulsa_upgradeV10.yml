@@ -2,7 +2,7 @@
 # Ansible Playbook to upgrade Cisco IOS 
 
 - name: Upgrade CISCO IOS 
-  hosts: SWITCHES
+  hosts: Tulsa_Test
 
   vars: 
     upgrade_ios_version: 152-7.E6
@@ -44,7 +44,7 @@
 
 ## Backup Running Config 
 
-- hosts: SWITCHES 
+- hosts: Tulsa_Test
 
   tasks:
    - name: Backup Running Config  
