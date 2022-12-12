@@ -4,12 +4,8 @@
   gather_facts: True
   connection:  local
   tasks:
-  - name: Show_Running
-    ios_command:
-      commands:
-        - show run
-    
-  - name: Save_output
-    copy:
-     content: "{{ config.stdout[0] }}"
-     dest: "/tmp/ansible/backups/show_run_config.txt"
+    - name: copying file with playbook
+      become: true 
+      copy:
+        src: ~/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin
+        dest: flash
