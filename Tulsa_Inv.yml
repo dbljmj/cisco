@@ -7,5 +7,4 @@
     - name: copying file with playbook
       become: true 
       copy:
-        src: "/network-programmability/images/c2960-lanbasek9-mz.122-55.SE12.bin"
-        dest: flash
+        scp ~/network-programmability/images/c2960x-universalk9-mz admin@172.18.200.170:flash/
