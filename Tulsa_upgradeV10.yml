@@ -5,6 +5,7 @@
   hosts: Tulsa_Test
   gather_facts: True
   connection:  local
+  become: False
 
   vars: 
     upgrade_ios_version: 152-7.E6
