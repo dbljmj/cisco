@@ -3,6 +3,8 @@
 
 - name: Upgrade CISCO IOS 
   hosts: Tulsa_Test
+  gather_facts: True
+  connection:  local
 
   vars: 
     upgrade_ios_version: 152-7.E6
