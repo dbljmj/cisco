@@ -4,7 +4,7 @@
 - name: Upgrade CISCO IOS 
   hosts: AnsibleTest
   gather_facts: True
-  connection:  local
+  #connection:  local
   
   vars: 
     upgrade_ios_version: 152-7.E6
