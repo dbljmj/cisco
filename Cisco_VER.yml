@@ -1,6 +1,6 @@
 ---
 - name: First Play
-  hosts: Tulsa_Test
+  hosts: AnsibleTest
   gather_facts: True
   connection:  local
   tasks:
