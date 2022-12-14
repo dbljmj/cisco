@@ -68,11 +68,14 @@
 ## Copy software to target device 
 
    - name: Copy Image // This could take up to 4 minutes
-     net_put: 
-       src: "~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
-       dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
-     vars: 
-       ansible_command_timeout: 600
+     ios_config:
+       commands:
+         - "scp ~/network-programmability/images/c2960x-universalk9-mz admin@172.18.200.170:flash/"
+     #net_put: 
+       #src: "~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
+       #dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
+     #vars: 
+       #ansible_command_timeout: 600
 
 ## Change the Boot Variable to the new image 
 
