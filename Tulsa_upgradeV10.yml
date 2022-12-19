@@ -40,7 +40,7 @@
 
    - name: Create Directory {{hostvars.localhost}}
      file:
-       path: ~/network-programmability/backups/{{hostvars.localhost}}
+       path: /network-programmability/backups/{{hostvars.localhost}}
        state: directory
   run_once: true
 
@@ -54,10 +54,10 @@
        commands: show run  
      register: config
 
-   - name: Save output to ~/network-programmability/backups/
+   - name: Save output to /network-programmability/backups/
      copy:
        content: "{{config.stdout[0]}}"
-       dest: "~/network-programmability/backups/{{hostvars.localhost}}/{{ inventory_hostname }}-{{hostvars.localhost}}-config.txt"
+       dest: "/network-programmability/backups/{{hostvars.localhost}}/{{ inventory_hostname }}-{{hostvars.localhost}}-config.txt"
 
 ## SAVE the Running Config 
 
@@ -70,9 +70,9 @@
    - name: Copy Image // This could take up to 4 minutes
      ios_config:
        commands:
-         - "scp ~/network-programmability/images/c2960x-universalk9-mz admin@172.18.200.170:flash/"
+         - "scp /network-programmability/images/c2960x-universalk9-mz admin@172.18.200.170:flash/"
      #net_put: 
-       #src: "~/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
+       #src: "/network-programmability/images/c2960x-universalk9-mz.152-7.E6.bin"
        #dest: "flash:/c2960x-universalk9-mz.152-7.E6.bin"
      #vars: 
        #ansible_command_timeout: 600
