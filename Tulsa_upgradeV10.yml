@@ -40,8 +40,8 @@
 
    - name: Create Directory {{hostvars.localhost.DTG}}
      file:
-      path: ~/network-programmability/backups/{{hostvars.localhost.DTG}}
-      state: directory
+       path: ~/network-programmability/backups/{{hostvars.localhost.DTG}}
+       state: directory
   run_once: true
 
 ## Backup Running Config 
