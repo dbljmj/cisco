@@ -38,9 +38,9 @@
      set_fact:
        DTG: "{{ ansible_date_time.date }}"
 
-   - name: Create Directory {{hostvars.localhost.DTG}}
+   - name: Create Directory {{hostvars.localhost}}
      file:
-       path: ~/network-programmability/backups/{{hostvars.localhost.DTG}}
+       path: ~/network-programmability/backups/{{hostvars.localhost}}
        state: directory
   run_once: true
 
