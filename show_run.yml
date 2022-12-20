@@ -4,7 +4,6 @@
   vars:
     git_branch: /network-programmability/backups
 tasks:
----
 - hosts: AnsibleTest
   gather_facts: false
   vars:
