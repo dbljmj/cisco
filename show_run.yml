@@ -9,4 +9,4 @@
   - name: Save config to local file
     copy:
       content: "{{ config_result.config }}"
-      dest: "configs/{{ inventory_hostname }}_running_config.txt"
+      dest: "/network-programmability/backups/{{ inventory_hostname }}_running_config.txt"
