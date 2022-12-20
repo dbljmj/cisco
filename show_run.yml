@@ -1,9 +1,8 @@
 ---
-- hosts: cisco
+- hosts: AnsibleTest
   gather_facts: no
   tasks:
   - name: Save Cisco running config to server
-    hosts: AnsibleTest
     ios_config:
       save: yes
     register: config_result
