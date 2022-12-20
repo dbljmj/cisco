@@ -2,10 +2,10 @@
 - hosts: AnsibleTest
   gather_facts: no
   tasks:
-  - name: Save Cisco running config to server
-    ios_config:
-      commands: show running-config
-    register: config_result
+  - name: Backup Running Config  
+     ios_command:
+       commands: show run  
+     register: config
   - name: Save config to local file
     copy:
       content: "{{ config_result.config }}"
