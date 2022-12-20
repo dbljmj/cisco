@@ -4,7 +4,7 @@
   tasks:
   - name: Save Cisco running config to server
     ios_config:
-      save: yes
+      commands: show running-config
     register: config_result
   - name: Save config to local file
     copy:
