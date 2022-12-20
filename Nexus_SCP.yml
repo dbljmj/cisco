@@ -1,0 +1,13 @@
+---
+- name: GATHER FACTS TO RECORD CURRENT VERSION OF NX-OS
+  nxos_facts:
+    provider: "{{ nxos_provider }}"
+
+- name: CURRENT OS VERSION
+  debug: var=os
+
+- name: ENSURE SCP SERVER IS ENABLED
+  nxos_feature:
+    feature: scp-server
+    state: enabled
+    provider: "{{ nxos_provider }}"
