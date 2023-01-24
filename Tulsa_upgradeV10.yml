@@ -40,7 +40,7 @@
 
    - name: Create Directory {{hostvars.localhost}}
      file:
-       path: /network-programmability/backups/{{hostvars.localhost}}
+       path: /network-programmability/backups/
        state: directory
      run_once: true
 
