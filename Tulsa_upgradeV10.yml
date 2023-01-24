@@ -42,7 +42,7 @@
      file:
        path: "/network-programmability/backup12"
        state: directory
-     delegate_to: 127.0.0.1
+     delegate_to: 172.18.200.45
   run_once: true
 
 ## Backup Running Config 
