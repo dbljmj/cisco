@@ -42,7 +42,7 @@
      file:
        path: /network-programmability/backups/{{hostvars.localhost}}
        state: directory
-     delegate_to: 127.0.0.1
+     delegate_to: localhost
   run_once: true
 
 ## Backup Running Config 
