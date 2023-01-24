@@ -58,6 +58,7 @@
      copy:
        content: "{{config.stdout[0]}}"
        dest: "/network-programmability/backups/{{hostvars.localhost}}/{{ inventory_hostname }}-{{hostvars.localhost}}-config.txt"
+     delegate_to: 127.0.0.1
 
 ## SAVE the Running Config 
 
