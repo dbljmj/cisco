@@ -26,7 +26,7 @@
 
 ## Create backup folder for today 
 
-#- hosts: AnsibleTest
+- hosts: localhost
 
   tasks:
    - name: Get ansible date/time facts
@@ -42,8 +42,7 @@
      file:
        path: /network-programmability/backups/{{hostvars.localhost}}
        state: directory
-     delegate_to: localhost
-  run_once: true
+     run_once: true
 
 ## Backup Running Config 
 
