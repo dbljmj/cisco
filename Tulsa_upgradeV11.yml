@@ -49,15 +49,16 @@
 - hosts: AnsibleTest
 
   tasks:
-   - name: Backup Running Config  
-     ios_command:
-       commands: show run  
-     register: config
-
-   - name: Save output to /network-programmability/backups/
-     copy:
-       content: "{{config.stdout[0]}}"
-       dest: "/network-programmability/backups/{{hostvars.localhost}}/{{ inventory_hostname }}-{{hostvars.localhost}}-config.txt"
+  - name: Get Running Config
+    block:
+    - name: Get show running
+      ios_command:
+        commands: show running-config
+      register: ios_cmd
+    - name: copy Running config to backup folder
+      copy:
+        content: "{{ ios_cmd.stdout[0] }}"
+        dest: "/network-programmability/backups/router_bkup.txt"
      
 ## SAVE the Running Config 
 
