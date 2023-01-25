@@ -50,8 +50,8 @@
 
   tasks:
    - name: Get show running
-      ios_command:
-        commands: show running-config
+      ios_config: 
+       commands:
       register: ios_cmd
    - name: copy Running config to backup folder
       copy:
