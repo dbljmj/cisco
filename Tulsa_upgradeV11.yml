@@ -49,8 +49,8 @@
 - hosts: AnsibleTest
 
   tasks:
-  - name: Get Running Config
-    block:
+   - name: Get Running Config
+     block:
     - name: Get show running
       ios_command:
         commands: show running-config
